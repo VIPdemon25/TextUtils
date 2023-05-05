@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 // import About from "./components/About";
+//updated
 import Form from "./components/Form";
 import Navbar from "./components/Navbar";
 import Alert from "./components/Alert";
@@ -12,11 +13,11 @@ function App() {
     if (mode === "light") {
       setMode("dark");
       document.body.style.backgroundColor = "#042743";
-      showAlert("Dark mode activated", "primary");
+      showAlert("Dark mode activated", "success");
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
-      showAlert("Light mode activated", "primary");
+      showAlert("Light mode activated", "success");
     }
   };
   const showAlert = (message, type) => {
