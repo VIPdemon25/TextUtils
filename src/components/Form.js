@@ -59,16 +59,16 @@ export default function Form(prop) {
           }}
         ></textarea>
       </div>
-      <button className="btn btn-primary" onClick={handleUclick}>
+      <button className="btn btn-primary my-1" onClick={handleUclick}>
         Change to toUpperCase
       </button>
-      <button className="btn btn-primary mx-3" onClick={handleLclick}>
+      <button className="btn btn-primary mx-3 my-1" onClick={handleLclick}>
         Change to LowerCase
       </button>
-      <button className="btn btn-primary mx-2" onClick={handleCclick}>
+      <button className="btn btn-primary mx-2 my-1" onClick={handleCclick}>
         Clear
       </button>
-      {/* <button className="btn btn-primary mx-2" onClick={handleSclick}>
+      {/* <button className="btn btn-primary mx-2" onClick={handleSclick}
         Remove Spaces
       </button> */}
       <div className="container my-3">
@@ -76,7 +76,12 @@ export default function Form(prop) {
           Your Text Summary
         </h2>
         <p style={{ color: prop.mode === "light" ? "#042743" : "white" }}>
-          {text.split(" ").length} words and {text.length} characters
+          {
+            text.split(" ").filter((element) => {
+              return element.length !== 0;
+            }).length
+          }{" "}
+          words and {text.length} characters
         </p>
       </div>
       {/* <div className="container">
