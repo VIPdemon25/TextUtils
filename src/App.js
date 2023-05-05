@@ -12,11 +12,11 @@ function App() {
     if (mode === "light") {
       setMode("dark");
       document.body.style.backgroundColor = "#042743";
-      showAlert("Dark mode activated", "success");
+      showAlert("Dark mode activated", "primary");
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
-      showAlert("Light mode activated", "success");
+      showAlert("Light mode activated", "primary");
     }
   };
   const showAlert = (message, type) => {
